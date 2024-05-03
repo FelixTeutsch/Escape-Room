@@ -183,6 +183,8 @@ public sealed class GameEngine
         {
             this.keyCollected = true;
             obstacle.Color = ConsoleColor.Cyan;
+            obstacle.Type = GameObjectType.Floor;
+            obstacle.CharRepresentation = "  ";
         }
 
         if (obstacle.Type == GameObjectType.Wall)
@@ -246,7 +248,7 @@ public sealed class GameEngine
 
         //Obstacle becomes floor after collision
         obstacle.Type = GameObjectType.Floor;
-        obstacle.CharRepresentation = ' ';
+        obstacle.CharRepresentation = "  ";
 
         //Refreshing the spot on the map where the obstacle was
         map.Set(obstacle);
