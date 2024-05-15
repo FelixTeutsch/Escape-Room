@@ -138,10 +138,14 @@ public sealed class GameEngine
             }
             Console.WriteLine();
         }
-        if (missingGoals > 0)
-            Console.WriteLine(missingGoals + " goal" + (missingGoals == 1 ? "s" : "") + " Missing");
-        else
-            Console.WriteLine("All goals are filled");
+        // if (missingGoals > 0)
+        //     Console.WriteLine(missingGoals + " goal" + (missingGoals == 1 ? "s" : "") + " Missing");
+        // else
+        //     Console.WriteLine("All goals are filled");
+        
+        if (keyCollected)
+        { Console.WriteLine("Key collected!");
+        }
 
         if (levelSaved != "")
         {
