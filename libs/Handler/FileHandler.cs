@@ -55,10 +55,20 @@ public static class FileHandler
 
         Console.Clear();
         Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine("Crazy Escape Room Game");
+
+        // LOAD FROM UNITY CONFIG (unity game can be provided if needed)
+        var configFilePath = Path.Combine(path, "Config", "config.json");
+
+        // Load the configuration from the JSON file
+        dynamic config = ReadJson(configFilePath);
+
+        // Print the configuration values
+        Console.WriteLine(config.MainTitle);
         Console.WriteLine("====================================");
         Console.ForegroundColor = ConsoleColor.DarkGreen;
-        Console.WriteLine("Main Menu");
+        Console.WriteLine(config.Subtitle);
+
+
         Console.ForegroundColor = ConsoleColor.White;
 
         if (!saveFiles.Any())
