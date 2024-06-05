@@ -47,9 +47,10 @@ public static class FileHandler
 
     public static void SaveSelector()
     {
-        string[] saveFiles = Directory
+        var saveFiles = Directory
             .GetFiles(path + "/Saves/")
             .OrderBy(filePath => filePath)
+            .Select(filePath => new { FilePath = filePath, FileName = Path.GetFileName(filePath) })
             .ToArray();
 
         Console.Clear();
@@ -60,7 +61,7 @@ public static class FileHandler
         Console.WriteLine("Main Menu");
         Console.ForegroundColor = ConsoleColor.White;
 
-        if (saveFiles.Length == 0)
+        if (!saveFiles.Any())
         {
             Console.WriteLine(
                 "Press any key (on your keyboard, not the screen) to start the game: "
@@ -70,10 +71,9 @@ public static class FileHandler
         }
 
         Console.WriteLine("Would you like to load a game save?");
-        for (int i = 0; i < saveFiles.Length; i++)
+        foreach (var (index, saveFile) in saveFiles.Select((saveFile, index) => (index, saveFile)))
         {
-            string fileName = Path.GetFileName(saveFiles[i]); // Extracting only the file name
-            Console.WriteLine($"{i + 1}: {fileName}");
+            Console.WriteLine($"{index + 1}: {saveFile.FileName}");
         }
 
         bool validInput = false;
@@ -82,9 +82,7 @@ public static class FileHandler
             try
             {
                 Console.Write(
-                    "\nEnter the number of the save file you would like to load(1 / "
-                        + saveFiles.Length
-                        + ") or 0 to just play: "
+                    $"\nEnter the number of the save file you would like to load(1 / {saveFiles.Length}) or 0 to just play: "
                 );
                 int saveFileNumber = Convert.ToInt32(Console.ReadLine());
                 if (saveFileNumber == 0)
@@ -96,17 +94,17 @@ public static class FileHandler
                 if (saveFileNumber > 0 && saveFileNumber <= saveFiles.Length)
                 {
                     validInput = true;
-                    string saveFile = saveFiles[saveFileNumber - 1];
+                    string saveFile = saveFiles[saveFileNumber - 1].FilePath;
                     dynamic saveFileContent = ReadJson(saveFile);
                     level = saveFileContent.levelNumber;
-                    files[level] = saveFiles[saveFileNumber - 1];
+                    files[level] = saveFile;
                     saveLoaded = true;
                     Console.Clear();
                 }
                 else
                 {
                     Console.WriteLine(
-                        "Invalid input. Please enter a number between 1 and " + saveFiles.Length
+                        $"Invalid input. Please enter a number between 1 and {saveFiles.Length}"
                     );
                 }
             }
@@ -179,7 +177,7 @@ public static class FileHandler
         * @param map Map object
         * @return string File path of the saved game state
         */
-    public static string saveGameState(List<GameObject> gameObjects, Map map)
+    public static string saveGameState(List<GameObject> gameObjects, Map map, int time)
     {
         // get the number of current save files
         int saveFiles = Directory.GetFiles(path + "/Saves/").Length;
@@ -201,6 +199,7 @@ public static class FileHandler
         jsonContent.levelNumber = level;
         jsonContent.levelName = map.LevelName;
         jsonContent.map = jsonMap;
+        jsonContent.time = time;
 
         List<dynamic> jsonGameObjects = new List<dynamic>();
         foreach (var gameObject in gameObjects)
@@ -210,6 +209,13 @@ public static class FileHandler
             jsonGameObject.Color = gameObject.Color;
             jsonGameObject.PosX = gameObject.PosX;
             jsonGameObject.PosY = gameObject.PosY;
+            jsonGameObject.CharRepresentation = gameObject.CharRepresentation;
+            if (gameObject is Obstacle obs)
+            {
+                jsonGameObject.TimeEffect = obs.TimeEffect;
+                jsonGameObject.Message = obs.Message;
+            }
+
             jsonGameObjects.Add(jsonGameObject);
         }
         jsonContent.gameObjects = jsonGameObjects;

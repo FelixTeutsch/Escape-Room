@@ -113,7 +113,7 @@ public sealed class GameEngine
 
     public void SaveToFile()
     {
-        levelSaved = FileHandler.saveGameState(gameObjects, map);
+        levelSaved = FileHandler.saveGameState(gameObjects, map, timeLeft().Seconds);
     }
 
     public void Render()
@@ -142,9 +142,10 @@ public sealed class GameEngine
         //     Console.WriteLine(missingGoals + " goal" + (missingGoals == 1 ? "s" : "") + " Missing");
         // else
         //     Console.WriteLine("All goals are filled");
-        
+
         if (keyCollected)
-        { Console.WriteLine("Key collected!");
+        {
+            Console.WriteLine("Key collected!");
         }
 
         if (levelSaved != "")
