@@ -1,346 +1,342 @@
 {
-	"levelName": "Hard? I don't think so!",
+	"levelName": "advanced-challenge",
 	"time": 300,
 	"map": {
-		"width": 12,
-		"height": 10
+		"width": 10,
+		"height": 8
 	},
 	"gameObjects": [
 		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 0,
-			"PosY": 0
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 1,
-			"PosY": 0
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
+			"Type": "Obstacle",
+			"CharRepresentation": "🚪",
 			"PosX": 2,
-			"PosY": 0
+			"PosY": 1,
+			"TimeEffect": -60,
+			"Message": "You open a door and fall into a trap! You lose 60 seconds!"
 		},
 		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 3,
-			"PosY": 0
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
+			"Type": "Obstacle",
+			"CharRepresentation": "🔮",
 			"PosX": 4,
-			"PosY": 0
+			"PosY": 2,
+			"TimeEffect": 90,
+			"Message": "You find a magical crystal that grants you extra time. You gain 90 seconds!"
 		},
 		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 5,
-			"PosY": 0
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
+			"Type": "Obstacle",
+			"CharRepresentation": "🕰️",
 			"PosX": 6,
-			"PosY": 0
+			"PosY": 5,
+			"TimeEffect": -120,
+			"Message": "You accidentally break a valuable antique clock! You lose 120 seconds!"
 		},
 		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 7,
-			"PosY": 0
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 8,
-			"PosY": 0
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 9,
-			"PosY": 0
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 10,
-			"PosY": 0
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 11,
-			"PosY": 0
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 0,
-			"PosY": 1
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 0,
-			"PosY": 2
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 0,
-			"PosY": 3
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 0,
-			"PosY": 4
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 0,
-			"PosY": 5
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 0,
-			"PosY": 6
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 0,
-			"PosY": 7
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 0,
-			"PosY": 8
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 0,
-			"PosY": 9
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
+			"Type": "Obstacle",
+			"CharRepresentation": "📝",
 			"PosX": 1,
-			"PosY": 9
+			"PosY": 6,
+			"TimeEffect": 60,
+			"Message": "You find a hidden note with helpful instructions. You gain 60 seconds!"
 		},
 		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 2,
-			"PosY": 9
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
+			"Type": "Obstacle",
+			"CharRepresentation": "💼",
 			"PosX": 3,
-			"PosY": 9
+			"PosY": 4,
+			"TimeEffect": -30,
+			"Message": "You waste time searching through a briefcase. You lose 30 seconds!"
 		},
 		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 4,
-			"PosY": 9
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 5,
-			"PosY": 9
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 6,
-			"PosY": 9
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
+			"Type": "Obstacle",
+			"CharRepresentation": "🔑",
 			"PosX": 7,
-			"PosY": 9
+			"PosY": 6,
+			"TimeEffect": 150,
+			"Message": "You find a key that opens a secret compartment with extra time! You gain 150 seconds!"
 		},
 		{
-			"Type": "Wall",
-			"Color": 3,
+			"Type": "Key",
+			"Color": 2,
 			"PosX": 8,
-			"PosY": 9
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 9,
-			"PosY": 9
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 10,
-			"PosY": 9
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 11,
-			"PosY": 9
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 11,
 			"PosY": 1
 		},
 		{
 			"Type": "Wall",
-			"Color": 3,
-			"PosX": 11,
-			"PosY": 2
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 11,
-			"PosY": 3
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 11,
-			"PosY": 4
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 11,
-			"PosY": 5
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 11,
-			"PosY": 6
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 11,
-			"PosY": 7
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 11,
-			"PosY": 8
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
+			"Color": 2,
 			"PosX": 4,
-			"PosY": 1
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 4,
-			"PosY": 2
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 9,
-			"PosY": 1
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 9,
-			"PosY": 3
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 4,
-			"PosY": 7
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 5,
-			"PosY": 7
-		},
-		{
-			"Type": "Wall",
-			"Color": 3,
-			"PosX": 6,
 			"PosY": 7
 		},
 		{
 			"Type": "Player",
 			"Color": 5,
 			"PosX": 1,
+			"PosY": 2
+		},
+		{
+			"Type": "Goal",
+			"Color": 5,
+			"PosX": 8,
+			"PosY": 7
+		},
+		{
+			"Type": "Wall",
+			"CharRepresentation": "🗝️",
+			"PosX": 1,
 			"PosY": 1
 		},
 		{
-			"Type": "Box",
-			"Color": 6,
-			"PosX": 2,
+			"Type": "Wall",
+			"CharRepresentation": "🚪",
+			"PosX": 3,
+			"PosY": 1
+		},
+		{
+			"Type": "Wall",
+			"CharRepresentation": "🔮",
+			"PosX": 7,
+			"PosY": 1
+		},
+		{
+			"Type": "Wall",
+			"CharRepresentation": "🕰️",
+			"PosX": 5,
 			"PosY": 2
 		},
 		{
-			"Type": "Box",
-			"Color": 6,
-			"PosX": 2,
+			"Type": "Wall",
+			"CharRepresentation": "🕰️",
+			"PosX": 1,
 			"PosY": 3
 		},
 		{
-			"Type": "Box",
-			"Color": 6,
-			"PosX": 9,
-			"PosY": 7
+			"Type": "Wall",
+			"CharRepresentation": "🕰️",
+			"PosX": 8,
+			"PosY": 4
 		},
 		{
-			"Type": "Box",
-			"Color": 6,
-			"PosX": 10,
-			"PosY": 7
-		},
-		{
-			"Type": "Goal",
-			"Color": 5,
+			"Type": "Wall",
+			"CharRepresentation": "📝",
 			"PosX": 6,
-			"PosY": 8
+			"PosY": 2
 		},
 		{
-			"Type": "Goal",
-			"Color": 5,
+			"Type": "Wall",
+			"CharRepresentation": "💼",
+			"PosX": 6,
+			"PosY": 4
+		},
+		{
+			"Type": "Wall",
+			"CharRepresentation": "🔑",
+			"PosX": 2,
+			"PosY": 5
+		},
+		{
+			"Type": "Wall",
+			"CharRepresentation": "🔑",
+			"PosX": 2,
+			"PosY": 6
+		},
+		{
+			"Type": "Wall",
+			"CharRepresentation": "🔑",
+			"PosX": 3,
+			"PosY": 6
+		},
+		{
+			"Type": "Wall",
+			"CharRepresentation": "🕰️",
 			"PosX": 7,
-			"PosY": 8
+			"PosY": 6
 		},
 		{
-			"Type": "Goal",
-			"Color": 5,
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 0,
+			"PosY": 0
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 1,
+			"PosY": 0
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 2,
+			"PosY": 0
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 3,
+			"PosY": 0
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 4,
+			"PosY": 0
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 5,
+			"PosY": 0
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 6,
+			"PosY": 0
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 7,
+			"PosY": 0
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 8,
+			"PosY": 0
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 9,
+			"PosY": 0
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 0,
+			"PosY": 7
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 1,
+			"PosY": 7
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 2,
+			"PosY": 7
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 3,
+			"PosY": 7
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 4,
+			"PosY": 7
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 5,
+			"PosY": 7
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 6,
+			"PosY": 7
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 7,
+			"PosY": 7
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 9,
+			"PosY": 7
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 0,
+			"PosY": 1
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 0,
+			"PosY": 2
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 0,
+			"PosY": 3
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 0,
+			"PosY": 4
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 0,
+			"PosY": 5
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 0,
+			"PosY": 6
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 9,
+			"PosY": 1
+		},
+		{
+			"Type": "Wall",
+			"CharRepresentation": "🚪",
+			"Color": 3,
 			"PosX": 9,
 			"PosY": 2
 		},
 		{
-			"Type": "Goal",
-			"Color": 5,
-			"PosX": 10,
-			"PosY": 2
+			"Type": "Wall",
+			"CharRepresentation": "🚪",
+			"Color": 3,
+			"PosX": 9,
+			"PosY": 3
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 9,
+			"PosY": 4
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 9,
+			"PosY": 5
+		},
+		{
+			"Type": "Wall",
+			"Color": 3,
+			"PosX": 9,
+			"PosY": 6
 		}
 	]
 }
