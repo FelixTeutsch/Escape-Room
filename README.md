@@ -25,4 +25,5 @@ Each obstacle has a back story and powers: ex. you find your phone. M8 texts
 
 # Video
 
-![](<Amazing Escape Room Explained.mkv>)
+The video is called Amazing Escape Room Explained.mkv and is in the root of the
+folder!
