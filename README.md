@@ -22,3 +22,7 @@ minutes.
 
 Each obstacle has a back story and powers: ex. you find your phone. M8 texts
 "Lecture starts 10 minutes later today" you get an extra 10 minutes.
+
+# Video
+
+![](<Amazing Escape Room Explained.mkv>)
