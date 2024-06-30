@@ -2,56 +2,17 @@
 
 This project is a collaboration between:
 
-- Hannah Frank (cc221009)
-- Yvonne Gassner (cc221037)
 - Felix Teutsch (cc221036)
-- Victor Petro (cc221029)
-- Caroline Mandl (cc221024)
+- Fridolin Chrisian Hurra (cc221047)
 
 # The game:
 
-## User Story 1
+Sokoban with mutliple levels. You can interact by running into objects. Your
+goal is to escape. You can save by pressing s and load a saved level at the
+beginning of the game.
 
-> As a user, I want to be able to complete a level.
-
----
-
-## User Story 2
-
-> As a user, I want to move in all cardinal directions.
-
----
-
-## User Story 3
-
-> As a user, I want to read my dialogs below the map.
-
----
-
-## User Story 4
-
-> As a user, I want the Dialog window to have the same width as the map.
-
----
-
-## User Story 5
-
-> As a user, I want to get visual feedback to my game moves.
-
----
-
-## User Story 6
-
-> As a user, I want to get hints when I'm stuck.
-
----
-
-## User Story 7
-
-> As a user, I want the game creators to only implement extra levels, if they
-> have time & motivation!
-
----
+The link to the repository is: https://github.com/FelixTeutsch/Escape-Room
+Everything is on the branch final_submission_felix_and_frido
 
 # Story
 
